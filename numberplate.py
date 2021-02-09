@@ -27,14 +27,14 @@ for c in contours:
 
 mask = np.zeros(gray.shape,np.uint8)
 new_image = cv2.drawContours(mask,[screenCnt],0,255,-1,)
-new_image = cv2.bitwise_and(img,img,mask=mask)
+newimage = cv2.bitwise_and(img,img,mask=mask)
 
 (x, y) = np.where(mask == 255)
 (topx, topy) = (np.min(x), np.min(y))
 (bottomx, bottomy) = (np.max(x), np.max(y))
 Cropped = gray[topx:bottomx+1, topy:bottomy+1]
 
-text = pytesseract.image_to_string(Cropped)
+text = pytesseract.image_to_string(Cropped, config="--psm 11")
 print("Detected license plate Number is:",text)
 cv2.imshow("Car Image", img)
 cv2.imshow("Image", Cropped)
