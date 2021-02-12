@@ -16,7 +16,7 @@ HelmetCascade = cv2.CascadeClassifier(HelmetPath)
 
 while True:
     success, img = Traffic1.read()
-    img = cv2.resize(img, (500,500))
+    img = cv2.resize(img, (500, 500))
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     plates = NumberPlateCascade.detectMultiScale(imgGray, 1.05, 1)        # Trial and Error for scale and min neighbours
     helmets = HelmetCascade.detectMultiScale(imgGray, 1.1, 1)

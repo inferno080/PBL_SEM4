@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12330cb5-5b05-44d4-a6d1-a86564d3e6e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Helmet and Number Plate detector on image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Both 2.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Both.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/C7C9WW.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Helmet Only 2.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Helmet Only.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Number Plates Only.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Only Number Plate.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/SampleText.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Traffic3.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/helmetdetection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Inferno_080.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Inferno_080.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Number Plate detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Number Plate detector.py" afterDir="false" />
     </list>
@@ -39,7 +27,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Extra-Curricular/OpenCV" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
