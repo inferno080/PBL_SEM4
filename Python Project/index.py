@@ -5,10 +5,10 @@ import pytesseract
 import re
 
 # Paths
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
-TrafficPath = 'Resources/helmet.mp4'
-NumberPlatePath = 'Resources/cascade_numberplate.xml'
-HelmetPath = 'Resources/Yes_boi.xml'
+pytesseract.pytesseract.tesseract_cmd = 'Resources/Tesseract/tesseract.exe'
+TrafficPath = 'Resources/inshot2.mp4'
+NumberPlatePath = 'Resources/haarcascade_russian_plate_number.xml'
+HelmetPath = 'Resources/helmetdetection_AARSY.xml'
 
 # Initialize values here
 
@@ -33,6 +33,7 @@ while True:
     helmets_y = 0
     plates_x = 0
     plates_y = 0
+    flag = 0
     for (x, y, w, h) in helmets:
         helmets_x = (2*x + w)/2
         helmets_y = (2*y + h)/2
@@ -43,6 +44,8 @@ while True:
         y_diff = abs(helmets_y - plates_y)
         x_diff = abs(helmets_x - plates_x)
         if y_diff < 700 and x_diff < 30:
+            flag = 1
+        if flag == 1:
             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
         else:
             cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
@@ -69,7 +72,7 @@ while True:
                 detected = 1
 
             if detected == 1:
-                cv2.drawContours(img, [screenCnt], -1, (0, 0, 255), 3)
+                #cv2.drawContours(img, [screenCnt], -1, (0, 0, 255), 3)
 
                 mask = np.zeros(gray.shape, np.uint8)
                 new_image = cv2.drawContours(mask, [screenCnt], 0, 255, -1, )
@@ -79,7 +82,7 @@ while True:
                 (topx, topy) = (np.min(x), np.min(y))
                 (bottomx, bottomy) = (np.max(x), np.max(y))
                 Cropped = gray[topx:bottomx + 1, topy:bottomy + 1]
-                cv2.imshow("crop", Cropped)
+                #cv2.imshow("crop", Cropped)
 
                 text = pytesseract.image_to_string(Cropped, config="--psm 13")
                 string_check = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
