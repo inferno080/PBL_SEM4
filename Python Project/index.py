@@ -115,6 +115,8 @@ while True:
             final_list.append(s)
 
     if(len(final_list)==1):
+        print("============================================")
         print("Detected number plate : ", final_list[0])
+        print("============================================")
     else:
         pass
